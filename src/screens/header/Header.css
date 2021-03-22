@@ -1,0 +1,29 @@
+.app-header {
+    background-color: #263238;
+    height: 36px;
+    padding: 8px 32px 8px 16px;
+}
+
+.home-title {
+    color: #fff;
+    font-size: 18px;
+}
+
+.login-card-style {
+    top: '50%';
+    left: '50%';
+    right: 'auto';
+    bottom: 'auto';
+    margin-right: '-50%';
+    transform: 'translate(-50%, -50%)';
+    text-align: center;
+}
+
+.login-login-style {
+    /*text-align: left;*/
+}
+
+
+.red {
+    color: red;
+}
