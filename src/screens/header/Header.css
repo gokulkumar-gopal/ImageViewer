@@ -19,11 +19,25 @@
     text-align: center;
 }
 
-.login-login-style {
-    /*text-align: left;*/
-}
-
-
 .red {
     color: red;
+}
+
+.dispNone {
+    display: none;
+}
+
+.dispBlock {
+    display: block;
+}
+
+.search-box {
+    background-color: #c0c0c0;
+    border-radius: 4px;
+    width: 300px;
+    margin: 5px 5px 5px;
+}
+
+.avatar {
+    float: right;
 }

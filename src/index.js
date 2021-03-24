@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './screens/header/Header';
+import Controller from './screens/Controller';
 
-ReactDOM.render(
-  <Header />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Controller />, document.getElementById('root'));
+
 
