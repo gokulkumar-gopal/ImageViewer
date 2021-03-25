@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Login.css';
 import Header from '../header/Header';
-import SearchIcon from '@material-ui/icons/Search';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
