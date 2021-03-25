@@ -37,3 +37,7 @@
 .likeitem {
     display: inline-block;
 }
+
+.comments {
+    display: inline-block;
+}

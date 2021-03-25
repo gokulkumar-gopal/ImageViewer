@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Header from '../header/Header';
 import { Typography } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
+import Input from '@material-ui/core/Input';
+import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -163,7 +165,11 @@ class Home extends Component {
                                     <span>
                                     <FavoriteBorderRoundedIcon id={movie.id} onClick={this.likeHandler} />
                                     <Typography>{this.state.numLikes} Likes</Typography>
-                                </span>}
+                                </span>}<br />
+                                <div className="comments">
+                                    <Input placeholder="Add a comment" type="text" />
+                                    <Button variant="contained" color="primary">ADD</Button>
+                                </div>
                             </CardContent>
                         </Card>
                     ))}
