@@ -73,9 +73,7 @@ class Home extends Component {
             loginPassword: "",
             loginFailed: false,
             allImagesData: [],
-            like: false,
-            likeClicked: "",
-            numLikes: 0
+            likedImages: []
         }
     }
 
@@ -119,8 +117,9 @@ class Home extends Component {
     }
 
     likeHandler = (e) => {
-        const{name, value} = e.target;
-        this.state.[name] === true ? this.setState({[name]: false, numLikes: this.state.numLikes+1}) : this.setState({[name]: true, numLikes: this.state.numLikes+1});
+        const name = e.target.id;
+        console.log(name);
+        this.state.[name] === true ? this.setState({ [name]: false, numLikes: this.state.numLikes - 1 }) : this.setState({ [name]: true, numLikes: this.state.numLikes + 1 });
     }
 
     render() {
@@ -130,7 +129,7 @@ class Home extends Component {
                 <Header loginSuccess={true} profilepicture={profile_picture} />
                 <div className="flex-container wrap">
                     {this.state.allImagesData.map(movie => (
-                        <Card id={movie.id} className={classes.Card}>
+                        <Card className={classes.Card} key={"movie" + movie.id}>
                             <CardHeader
                                 avatar={
                                     <Avatar src={profile_picture} alt="Gokul" className={classes.avatar} />
@@ -151,9 +150,13 @@ class Home extends Component {
                             <CardContent>
                                 <Typography variant="body2" color="textPrimary" component="p">
                                     PG Diploma in Full Stack Development
-                                </Typography><br/>
+                                </Typography><br />
                                 <span>
-                                    <FavoriteIcon onClick={this.likeHandler} className={this.state.likeClicked} />
+                                    <FavoriteIcon className="red" onClick={this.likeHandler} />
+                                    <Typography>{this.state.numLikes} Likes</Typography>
+                                </span> :
+                                    <span>
+                                    <FavoriteBorderRoundedIcon onClick={this.likeHandler} />
                                     <Typography>{this.state.numLikes} Likes</Typography>
                                 </span>
                             </CardContent>
